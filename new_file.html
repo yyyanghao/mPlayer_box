@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/mBox_plugin.css"/>
+	</head>
+
+	<body>
+		<div class="mBox">
+			<div id="box">
+				<div class="front mBox_background"></div>
+				<div class="back  mBox_background"></div>
+				<div class="top   mBox_background"></div>
+				<div class="bottom mBox_background"></div>
+				<div class="left mBox_background"></div>
+				<div class="right mBox_background"></div>
+			</div>
+			<div class="music">
+				<div class="mBox_contorl">
+					<audio src="" class="mBox_audio" id="mBox_audio"></audio>
+					<span class="mBox_prev"><img src="images/previous.svg"/></span><span class="pusCon"><img src="images/play-button.svg"/></span><span class="mBox_next"><img src="images/skip.svg"/></span><br/>
+					<div class="mBox_dur">
+						<div class="mBox_cur"></div>
+					</div>
+					<span class="mBox_curTime">0.00</span>
+					<span class="mBox_durTime">0.00</span><br/>
+					<div class="mvol_title"><img src="images/speaker.svg" />
+						<div class="u_vol">
+							<div class="d_vol"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+	<script type="text/javascript" src="js/mBox_plugin.js"></script>
+	<script>
+		$('#box').mBox({
+			//新建一个data文件夹，将音乐文件放进去
+			mSrc: ["data/Kate Havnevik - So：Lo.mp3", "data/SEKAI NO OWARI - 幻の命.mp3", 
+				 "data/好妹妹乐队,陈粒 - 38号大迪曲.mp3","data/Xandria - Eversleeping.mp3","data/ヘクとパスカル - fish in the pool.mp3", "data/Yann Tiersen - Comptine d'un autre été, l'après-midi.mp3"
+			],
+			//img:按照歌曲顺序放入专辑封面
+			mImg: ["img/a1.png", "img/a2.JPG", "img/a3.JPG", "img/a4.JPG", "img/a5.JPG", "img/a6.JPG"],
+			mBox: ".music"
+		});
+	</script>
+
+</html>
